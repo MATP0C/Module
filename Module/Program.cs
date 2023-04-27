@@ -15,18 +15,17 @@ namespace Modul
             }
             return result;
         }
-        static int[] SortArray(int[] result)
+        static int[] SortArray(int[] array, bool IsSort = false)
         {
-            int temp = 0;
-            for (int i = 0; i < result.Length; i++)
-                for (int j = i + 1; j < result.Length; j++)
-                    if (result[i] > result[j])
-                    {
-                        temp = result[i];
-                        result[i] = result[j];
-                        result[j] = temp;
-                    }
-            return result;
+            var temp = array;
+            if(IsSort)
+            {
+                temp = SortArray(array);
+            }
+            foreach(var item in temp)
+            {
+                Console.WriteLine(item);
+            }
         }
         static void Main(string[] args)
         {
