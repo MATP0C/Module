@@ -11,7 +11,7 @@ namespace Modul
             for (int i = 0; i < result.Length; i++)
             {
                 Console.WriteLine("Введите элемент массиваномер {0}", i + 1 );
-                result[i] = int.Parse(Console.ReadLine());
+                result[i] = Convert.ToInt32(Console.ReadLine());
             }
             return result;
         }
@@ -26,8 +26,12 @@ namespace Modul
                         result[i] = result[j];
                         result[j] = temp;
                     }
-
             return result;
+        }
+        static void Main(string[] args)
+        {
+            var array = GetArrayFromConsole();
+            var sortedarray = SortArray(array);
         }
     }
 }
