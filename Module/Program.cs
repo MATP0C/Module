@@ -26,6 +26,7 @@ namespace Modul
             {
                 Console.WriteLine(item);
             }
+            return array;
         }
         static void Main(string[] args)
         {
